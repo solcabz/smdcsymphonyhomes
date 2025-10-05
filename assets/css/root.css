@@ -1,0 +1,192 @@
+/* 1. Fonts */
+@font-face {
+  font-family: 'Henry Sans';
+  src: url('../fonts/HENRYSANS-REGULAR.TTF') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Henry Sans';
+  src: url('../fonts/HENRYSANS-LIGHT.TTF') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Henry Sans';
+  src: url('../fonts/HENRYSANS-MEDIUM.TTF') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Colors */
+  --color-primary-white: #F5F7FA;
+  --color-secondary-white: #ECEBEA;
+  --color-primary-blue: #0B1427;
+  --color-secondary-blue: #469ACC;
+  --color-tertiary-blue: #002349;
+
+  /* Fonts */
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-henry: 'Henry Sans', sans-serif;
+
+  /* Headings */
+  --h1-size: 100px;
+  --h2-size: 60px;
+  --h3-size: 40px;
+  --h4-size: 28px;
+  --h5-size: 24px;
+  --heading-weight: 600; /* semibold */
+
+  /* Text */
+  --quote-size: 16px;
+  --quote-weight: 600; /* semibold */
+  --p-bold-size: 24px;
+  --p-bold-weight: 700;
+  --p-light-size: 24px;
+  --p-light-weight: 300;
+
+  /* Blurb & Details */
+  --blurb-size: 24px;
+  --blurb-weight: 300;
+  --detail-20-size: 20px;
+  --detail-22-size: 22px;
+  --detail-24-size: 24px;
+  --detail-weight: 300;
+
+  /* Buttons & Inputs */
+  --button-size: 16px;
+  --button-weight: 500;
+  --input-size: 16px;
+  --input-weight: 300;
+
+  /* Footer */
+  --footer-detail-size: 24px;
+  --footer-detail-weight: 300;
+  --footer-copyright-size: 20px;
+  --footer-copyright-weight: 300;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  background-color: var(--color-primary-white);
+  color: var(--color-primary-blue);
+}
+
+/* Example usage */
+h1 {
+  font-family: var(--font-montserrat);
+  font-size: var(--h1-size);
+  font-weight: var(--heading-weight);
+}
+h2 {
+  font-family: var(--font-montserrat);
+  font-size: var(--h2-size);
+  font-weight: var(--heading-weight);
+}
+h3 {
+  font-family: var(--font-montserrat);
+  font-size: var(--h3-size);
+  font-weight: var(--heading-weight);
+}
+h4 {
+  font-family: var(--font-montserrat);
+  font-size: var(--h4-size);
+  font-weight: var(--heading-weight);
+}
+h5 {
+  font-family: var(--font-montserrat);
+  font-size: var(--h5-size);
+  font-weight: var(--heading-weight);
+}
+
+p.bold {
+  font-family: var(--font-montserrat);
+  font-size: var(--p-bold-size);
+  font-weight: var(--p-bold-weight);
+}
+p.light {
+  font-family: var(--font-montserrat);
+  font-size: var(--p-light-size);
+  font-weight: var(--p-light-weight);
+}
+.text-quote {
+  font-family: var(--font-montserrat);
+  font-size: var(--quote-size);
+  font-weight: var(--quote-weight);
+}
+.blurb {
+  font-family: var(--font-henry);
+  font-size: var(--blurb-size);
+  font-weight: var(--blurb-weight);
+}
+.detail-20 {
+  font-family: var(--font-henry);
+  font-size: var(--detail-20-size);
+  font-weight: var(--detail-weight);
+}
+.detail-22 {
+  font-family: var(--font-henry);
+  font-size: var(--detail-22-size);
+  font-weight: var(--detail-weight);
+}
+.detail-24 {
+  font-family: var(--font-henry);
+  font-size: var(--detail-24-size);
+  font-weight: var(--detail-weight);
+}
+
+.btn{
+  width: 170px;
+  height: 40px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: var(--color-tertiary-blue);
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover{
+  background-color: var(--color-secondary-blue);
+}
+
+a.btn {
+  width: 160px;
+  display: flex;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.button-text {
+  font-family: var(--font-henry);
+  font-size: var(--button-size);
+  font-weight: var(--button-weight);
+  color: var(--color-secondary-white);
+}
+.input-label {
+  font-family: var(--font-henry);
+  font-size: var(--input-size);
+  font-weight: var(--input-weight);
+}
+.footer-detail {
+  font-family: var(--font-henry);
+  font-size: var(--footer-detail-size);
+  font-weight: var(--footer-detail-weight);
+}
+.footer-copyright {
+  font-family: var(--font-henry);
+  font-size: var(--footer-copyright-size);
+  font-weight: var(--footer-copyright-weight);
+}
