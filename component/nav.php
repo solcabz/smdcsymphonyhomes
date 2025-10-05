@@ -1,9 +1,13 @@
 <header class="site-header">
   <div class="container">
     <div class="logo">
-      <a href="<?php echo esc_url(home_url('/')); ?>">
-        <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/symphony-logo.png')); ?>" alt="symphony homes logo" />
-      </a>
+      <?php
+          $header_img = get_theme_mod('header_image');
+          if ($header_img) : ?>
+              <a href="<?php echo esc_url(home_url('/')); ?>">
+                <img src="<?php echo esc_url($header_img); ?>" alt="symphony homes logo" />
+              </a>
+          <?php endif; ?>
     </div>
 
     <div class="wrapper-nav">
@@ -31,11 +35,62 @@
     </div>
 
     <!-- Unified mobile menu -->
+    <div class="menu-backdrop" id="menu-backdrop">
     <nav class="menu-wrap" id="mobile-menu">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Projects</a>
-      <a href="#">Contact</a>
-    </nav>
+      <button class="close-menu" aria-label="Close Menu">&times;</button>
+
+        <div class="sidebar-top">
+          <div class="logo-sidebar">
+            <?php
+            $sidebar_img = get_theme_mod('sidebar_image');
+            if ($sidebar_img) : ?>
+                <a href="<?php echo home_url(); ?>">
+                  <img src="<?php echo esc_url($sidebar_img); ?>" alt="Sidebar Image">
+                </a>
+            <?php endif; ?>
+          </div>
+
+          <div class="menu-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+        <div class="sidebar-bottom">
+          <div class="contact-text">
+            <p>Contact Us</p>
+             <div class="side-contact">
+                <p><?php echo esc_html(get_option('footer_phone_1')); ?></p>
+                <p><?php echo esc_html(get_option('footer_phone_2')); ?></p>
+                <a href="mailto:<?php echo esc_attr(get_option('footer_email')); ?>">
+                    <?php echo esc_html(get_option('footer_email')); ?></p>
+                </a>    
+            </div>
+          </div>
+          <div class="sidebar-icons">
+            <?php
+              global $wpdb;
+              $table_social = $wpdb->prefix . 'social_links';
+              $social_icons = $wpdb->get_results("SELECT * FROM $table_social");
+
+              // Example: Loop and output
+              if ($social_icons) {
+                  foreach ($social_icons as $icon) {
+                      echo '<a href="'.esc_url($icon->link).'" target="_blank">';
+                      if (!empty($icon->img)) {
+                          echo '<img src="'.esc_url($icon->img).'" alt="'.esc_attr($icon->name).'" style="width:30px;height:30px;">';
+                      } else {
+                          echo esc_html($icon->name);
+                      }
+                      echo '</a> ';
+                  }
+              }
+            ?>
+          </div>
+        </div>
+      </nav>
+    </div>
+
   </div>
 </header>

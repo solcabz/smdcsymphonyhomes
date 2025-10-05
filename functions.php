@@ -56,4 +56,7 @@ add_action('wp_enqueue_scripts', 'enqueue_all_scripts');
 
 require_once get_template_directory( ). '/config/admin-settings.php';
 require_once get_template_directory( ). '/config/search-settings.php';
+require_once get_template_directory( ). '/config/logo-settings.php';
+require_once get_template_directory( ). '/config/icon-settings.php';
+require_once get_template_directory( ). '/config/footer-details.php';
 require_once get_template_directory( ). '/config/tiktok.php';

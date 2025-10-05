@@ -115,6 +115,7 @@ p.bold {
   font-size: var(--p-bold-size);
   font-weight: var(--p-bold-weight);
 }
+
 p.light {
   font-family: var(--font-montserrat);
   font-size: var(--p-light-size);
