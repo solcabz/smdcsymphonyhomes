@@ -36,10 +36,10 @@
   --font-henry: 'Henry Sans', sans-serif;
 
   /* Headings */
-  --h1-size: 100px;
-  --h2-size: 60px;
+  --h1-size: 60px;
+  --h2-size: 50px;
   --h3-size: 40px;
-  --h4-size: 28px;
+  --h4-size: 30px;
   --h5-size: 24px;
   --heading-weight: 600; /* semibold */
 
@@ -76,6 +76,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #0B1427;
 }
 
 body{
@@ -155,6 +156,7 @@ p.light {
   cursor: pointer;
   background-color: var(--color-tertiary-blue);
   transition: background-color 0.3s ease;
+  text-decoration: none;
 }
 
 .btn:hover{

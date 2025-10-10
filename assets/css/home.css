@@ -1,0 +1,154 @@
+/* hero section */
+.hero-banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-wrapeper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 48px;
+    padding: 0 20px;
+}
+
+.hero-wrapeper h1{
+    font-size: 60px;
+    text-align: center;
+}
+
+
+.hero-banner img{
+    width: 100%;
+}
+/* avp */
+
+.avp-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin: 0 160px;
+    padding: 80px 0;
+}
+.avp-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.avp-content{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.avp-content h1{
+    color: var(--color-primary-blue);
+}
+
+.avp-content p{
+    width: 991px;
+    font-size: var(--blurb-size);
+    font-weight: 300;
+    font-family: var(--font-henry);
+    margin: 0 40px;
+}
+
+
+.avp-video-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-height: 689px;
+    height: 100%;
+}
+
+.avp-video {
+    width: 100%;
+    height: 100%;
+    max-height: 689px;
+    display: block;
+    border-radius: 24px;
+    object-fit: cover;
+}
+
+/* Play/Pause Button */
+.avp-playpause-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: white;
+    font-size: 36px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 16px 20px;
+    opacity: 1;
+    transition: opacity 0.4s ease, background 0.3s ease;
+}
+
+/* Hide pause icon by default */
+.avp-playpause-btn .pause {
+    display: none;
+}
+
+/* Fade out button when playing */
+.avp-video-container.playing .avp-playpause-btn {
+    opacity: 0;
+}
+
+/* Reappear on hover */
+.avp-video-container:hover .avp-playpause-btn {
+    opacity: 1;
+}
+
+/* Small touch for hover feedback */
+.avp-playpause-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+
+/* featured property */
+.featured-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin: 0 160px;
+    padding: 80px 0;
+}
+
+.featured-content{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.featured-content h1{
+    color: var(--color-primary-blue);
+}
+
+.featured-content p{
+    max-width: 1200px;
+    width: 100%;
+    font-size: var(--blurb-size);
+    font-weight: 300;
+    font-family: var(--font-henry);
+    text-align: center;
+}
